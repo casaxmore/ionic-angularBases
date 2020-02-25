@@ -1,0 +1,15 @@
+<br>
+<h4>Posts</h4>
+
+<ul>
+
+  <!-- <li class="list-group-item" *ngFor="let mensaje of mensajes"> -->
+<!--   <li class="list-group-item" *ngFor="let mensaje of mensajes | async">
+    <h2>{{mensaje.title}}</h2>
+    <p>{{mensaje.body}}</p>
+  </li> -->
+
+  <app-post *ngFor="let mensaje of mensajes | async"
+            [mensaje]= "mensaje" (clickPost)="escuchaClick($event)"></app-post>
+
+</ul>
